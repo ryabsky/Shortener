@@ -1,0 +1,21 @@
+﻿.form-ui input{
+    margin: 5px 10px 0 10px;
+    width: 500px;
+}
+.form-label {
+    display: inline-block;
+    width: 200px;
+}
+
+.link-row {
+    table-layout: fixed;
+    overflow: hidden;
+    word-wrap: initial;
+    word-break: break-all;}
+ tr { height: 40px; }
+.cell-url { width: 500px; padding-left: 7px; padding-right: 7px; }
+.cell-short-url { width: 300px;  padding-left: 7px; padding-right: 7px; }
+.main-content { padding-left: 30px; padding-top: 10px}
+.input-nr {
+    width: 500px;
+}

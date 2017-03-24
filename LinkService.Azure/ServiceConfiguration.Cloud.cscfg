@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="LinkService.Azure" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="LinkService">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=linkservice;AccountKey=$(_linkservice.key_)" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="ryabsky" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEExMbZ5QK9inQUDtdSIWSKYwDQYJKoZIhvcNAQEBBQAEggEAJc3K5K/SIYxvUvVDxjNVjDD7sx+lZCLDb4DgXylGy74tXjJiEZP1xrwWtL5EvJ6vyCj4HfOi5gqrb8p8pUSnSPLxSp9s76Ek2l0GttNxz5Xf3HM427Hcc69Bio3jdUAoS9Ryg421jTS5KJ5E08C69fX4gKQqv7guQl2/4htjEnrcD88cBxgwL8SkI/rBbcGqUst/ZMo71hE3FERaH0nMO2X+c+6e0kboQgcYJiefwAQp2bcw2xOkfSiWqHdXz/2OJvXOZwtX5hnubpVMnGhdPs9Y/LOk050blmqQG3a183AU06QcP8gtLr6JDFIuil9BmMxIvVUaEosZeWFdV9VnazAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECDmaon1djpRUgBCWDvqrh6NvegoYVKfdaA2d" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2018-03-24T23:59:59.0000000+03:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="20527B62026AA453FFD0BA77194D7127AED09FDC" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="ShortenerWebApp.Azure" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="ShortenerWebApp">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=linkservice;AccountKey=$(_linkservice.key_)" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="ryabsky" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEB7j18ePeMCsQFU7ZDiTc2QwDQYJKoZIhvcNAQEBBQAEggEAR0WhyM446hP8iv2PDMJlKrcXa1nUKEMOPCXtwdWoED3EAm1yGvaZVU9ZN2WPACHmiu1s3nXeOAbjTY78ly0EtBTdOkkZNNxNLUey9c796QWzy1uw+LlR0VyYKGQUqugwAt/KwTqmfqmuiSLG8DQ6RXSExXK+wdTAdm6wOyN4IhoRn3PUerCz4xCj9HPgUjjMnCPj1s+4m1a7vgpX37QmD1x61ZONTsJfGD4GnVXWrPY9ejLb4pnTrAKJVg4BWL3TDMH5Fk2IO+DLl4BuMl9SA/UU+43n0COVbuqY7Tah8/H4AAJ1+TOEWiZo+HSjHrMYH44/kRqweCq0rBAhmjq3hTAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECFtSPLkTkvpSgBBX7wC8wsqH2J3AF0JdLldQ" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2018-03-24T23:59:59.0000000+03:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="A3095F3BEF920863F5756A5F116437936798E0D8" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>
